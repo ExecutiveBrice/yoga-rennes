@@ -1,20 +1,134 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<video autoplay loop poster="polina.jpg" id="bgvid">
+  <source src="../assets/file.mp4" type="video/mp4">
+</video>
 
+
+<div class="coeur">
+  <div>
+    <img width="300" alt="Angular Logo" src="../assets/099da3_71b1543599f34ac1bd87ccc9f36f27cd.webp">
+  </div>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light ">
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['accueil']">ACCUEIL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['presentation']">Présentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['inspiration']">Yoga d'inspiration
+            Tibetaine</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['animation']">Animation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['localisation']">Localisation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['adherents']">Réservé aux adhérents</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLinkActive]="['active']" [routerLink]="['location']">Location salle</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light footer ">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav footer">
+        <li class="nav-item footer-item">
+            <a class="nav-link" [routerLink]="['localisation']">
+          <div class="titre2">
+            Dominique Morel
+          </div>
+          <div class="titre3">
+            06 72 06 85 43
+          </div>
+          <div class="titre3">
+            ananda_yoga@hotmail.fr
+          </div>
+        </a>
+        </li>
+        <li class="nav-item footer-item">
+          <a class="nav-link" [routerLink]="['localisation']">
+            <div class="titre2">
+              Pacé
+            </div>
+            <div class="titre3">
+              Cours les lundis
+            </div>
+          </a>
+        </li>
+        <li class="nav-item footer-item">
+          <a class="nav-link" [routerLink]="['localisation']">
+            <div class="titre2">
+              Tinténiac
+            </div>
+            <div class="titre3">
+              Cours les mercredis et jeudi matin
+            </div>
+          </a>
+        </li>
+        <li class="nav-item footer-item">
+          <a class="nav-link" [routerLink]="['localisation']">
+            <div class="titre2">
+              Rennes
+            </div>
+            <div class="titre3">
+              Cours les jeudis
+            </div>
+          </a>
+        </li>
+        <li class="nav-item footer-item">
+            <a class="nav-link" [routerLink]="['localisation']">
+          <div class="titre2">
+            Association Ananda
+          </div>
+          <div class="titre3">
+            Association loi 1901
+          </div>
+</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+</div>
+<script>
+  var vid = document.getElementById("bgvid");
+  var pauseButton = document.getElementById("vidpause");
+  function vidFade() {
+    vid.classList.add("stopfade");
+  }
+  vid.addEventListener('ended', function () {
+    // only functional if "loop" is removed
+    vid.pause();
+    // to capture IE10
+    vidFade();
+  });
+  pauseButton.addEventListener("click", function () {
+    vid.classList.toggle("stopfade");
+    if (vid.paused) {
+      vid.play();
+      pauseButton.innerHTML = "Pause";
+    } else {
+      vid.pause();
+      pauseButton.innerHTML = "Paused";
+    }
+  })
+</script>

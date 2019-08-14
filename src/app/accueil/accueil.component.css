@@ -1,0 +1,55 @@
+
+.bordure {
+    margin: 25px;
+   
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: white;
+    display: block;
+}
+
+.carre {
+    width : 100%;
+    overflow: hidden;
+    max-height: 250px;
+  }
+
+.rectanglesansbordure {
+    margin: 25px;
+    display: block;
+    width : 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    height: 540px;
+  }
+
+.rectanglebordure {
+    margin: 25px;
+    height: 540px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+  }
+
+  .titre1 {
+    font-family:Tahoma, Geneva, sans-serif;
+font-size: 35px;
+font-weight: 800;
+  }
+
+  .titre2 {
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+      color: rgba(86, 27, 60, 1);
+  }
+
+  
+  .titre3 {
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+  }
