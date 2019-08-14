@@ -1,17 +1,23 @@
 {
   "name": "yoga",
   "version": "0.0.0",
+  "engines": {
+    "node": "11.6.0",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node ./bin/www",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --prod --aot",
+    "deploy": "git push origin master && git push heroku master",
+    "start:dev": "nodemon ./bin/www"
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-angular": "~0.13.0",
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
     "@angular/cli": "~7.3.8",
