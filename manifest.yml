@@ -1,4 +1,9 @@
+# App Manifest
 applications:
 - name: yoga
-  random-route: true
-  memory: 128M
+  buildpacks: 
+   - https://github.com/cloudfoundry/staticfile-buildpack
+  path: ./dist/yoga
+  command: "$HOME/boot.sh"
+  routes:
+    - route: https://yoga-tibetain-rennes.eu-gb.mybluemix.net/
