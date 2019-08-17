@@ -1,0 +1,4 @@
+applications:
+- name: yoga-tibetain-rennes
+  random-route: true
+  memory: 128M
